@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const LastPrice = ({ currency, lastAmount }) => (
-  <span className="price-comparation">
+  <span className="last-price">
     {currency}{lastAmount}
   </span>
 );

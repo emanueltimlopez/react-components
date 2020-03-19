@@ -1,0 +1,69 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.item__container {
+  margin: 1rem;
+  width: 25%;
+  max-width: 230px;
+  background: #fff;
+  font-family: "ClementePDae-Light", "Arial";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.item__info-line {
+  display: flex;
+  font-size: 0.9em;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.image {
+  width: 100%;
+  background-color: #999;
+  height: 140px;
+  background-position: center;
+  background-size: cover;
+}
+
+.button__link {
+  text-decoration: none;
+}
+
+.button__text {
+  text-transform: uppercase;
+  border-bottom: 2px solid #fff;
+  width: 55%;
+  margin-top: 0.3rem;
+}
+
+.button__text:hover {
+  border-bottom: 2px solid #000;
+}
+
+.name {
+  padding: 1rem;
+}
+
+.price {
+  font-size: 1.2em;
+}
+
+.last-price {
+  text-decoration: line-through;
+  font-size: 0.8em;
+  padding-left: 0.5rem;
+  vertical-align: bottom;
+}
+
+.tag {
+  background: #f55;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  padding: 0.3rem 0.7rem;
+  color: #fff;
+}
