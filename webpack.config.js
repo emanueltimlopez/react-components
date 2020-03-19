@@ -11,17 +11,18 @@ readdirSync('./modules').forEach((name) => {
 });
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: entries,
   output: {
     path: path.resolve(__dirname, 'dist'),
     library: 'components',
   },
   optimization: {
-    runtimeChunk: true,
+    runtimeChunk: false,
     usedExports: true
   },
   externals: [
+    'react',
   ],
   module: {
     rules: [

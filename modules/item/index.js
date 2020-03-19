@@ -16,9 +16,8 @@ export const Item = ({ tag, price, button, name, image }) => {
         {tag && <Tag {...tag}/>}
       </Image>
 
-      <Name {...name} />
-
       <div className={`${CLASS_ID}__info-line`}>
+        <Name {...name} />
         <Price {...price}/>
         {price.lastAmount && <LastPrice {...price} />}
 
