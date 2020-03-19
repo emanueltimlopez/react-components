@@ -1,26 +1,28 @@
 import React from 'react';
+import { Tag } from './internal/tag';
+import { Price } from './internal/price';
+import { Image } from './internal/image';
+import { LastPrice } from './internal/last-price';
+import { Button } from './internal/button';
+import { Name } from './internal/name';
+import  './styles.scss';
 
-export const Item = () => {
+const CLASS_ID = 'item';
+
+export const Item = ({ tag, price, button, name, image }) => {
   return (
-    <div className='item__container'>
-      <div className={`item__image`}>
-        {tag && <div className='item__tag'>{tag}</div>}
-      </div>
+    <div className={`${CLASS_ID}__container`}>
+      <Image {...image}>
+        {tag && <Tag {...tag}/>}
+      </Image>
 
-      <span className="item__name">{name}</span>
+      <Name {...name} />
 
-      <div className="item__info-line">
-        {priceComparation && 
-          <span className="item__price-comparation">
-            ${priceComparation}
-          </span>}
-        
-        <span className="item__price">
-          ${price}
-        </span>
-        <a href={`/product/${id}`}>
-          <div className="item__more">Comprar</div>
-        </a>
+      <div className={`${CLASS_ID}__info-line`}>
+        {price.lastAmount && <LastPrice {...price} />}
+        <Price {...price}/>
+
+        <Button {...button} />
       </div>
     </div>
   );
