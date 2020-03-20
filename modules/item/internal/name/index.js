@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Element } from './styles';
+
 export const Name = ({ text }) => (
-  <span className="name font-bold text-xl mb-2">{text}</span>
+  <Element>{text}</Element>
 );

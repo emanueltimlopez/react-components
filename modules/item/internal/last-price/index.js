@@ -1,7 +1,8 @@
 import React from 'react';
+import { Element } from './styles';
 
 export const LastPrice = ({ currency, lastAmount }) => (
-  <span className="last-price">
+  <Element>
     {currency}{lastAmount}
-  </span>
+  </Element>
 );

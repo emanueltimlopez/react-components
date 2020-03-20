@@ -1,7 +1,8 @@
-import React from 'react';
+import react from 'react';
 import { action } from '@storybook/addon-actions';
 import { Item } from './';
 import { mockDefault, mockTag, mockLastAmount } from './mocks';
+import { Base } from '../base';
 
 export default {
   title: 'Item',
@@ -9,13 +10,19 @@ export default {
 };
 
 export const Default = () => (
-  <Item {...mockDefault} />
+  <Base>
+    <Item {...mockDefault} />
+  </Base>
 );
 
 export const Tag = () => (
-  <Item {...mockTag} />
+  <Base>
+    <Item {...mockTag} />
+  </Base>
 );
 
 export const ReducedPrice = () => (
-  <Item {...mockLastAmount} />
+  <Base>
+    <Item {...mockLastAmount} />
+  </Base>
 );

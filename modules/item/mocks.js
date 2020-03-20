@@ -5,7 +5,7 @@ export const mockDefault = {
   },
   button: {
     url: '',
-    text: 'Comprar',
+    text: 'Ver más',
     id: 12345
   },
   name: {
@@ -13,6 +13,9 @@ export const mockDefault = {
   },
   image: {
     url: ''
+  },
+  sub: {
+    text: 'Categoria'
   }
 }
 

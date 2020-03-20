@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { Element } from './styles';
+
 export const Price = ({ currency, amount }) => (
-  <span className="price text-gray-700 text-base">
+  <Element>
     {currency}{amount}
-  </span>
+  </Element>
 );

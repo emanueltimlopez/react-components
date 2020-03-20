@@ -7,14 +7,11 @@
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "tailwindcss": "^1.2.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
@@ -24,9 +21,12 @@
     "@storybook/addon-links": "^5.3.17",
     "@storybook/addons": "^5.3.17",
     "@storybook/react": "^5.3.17",
+    "@storybook/storybook-deployer": "^2.8.3",
     "@storybook/theming": "^5.3.17",
     "@testing-library/react": "^10.0.1",
     "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.7",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "jest": "^25.1.0",
     "node-sass": "^4.13.1",
     "postcss-import": "^12.0.1",
@@ -40,5 +40,8 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "styled-components": "^5.0.1"
   }
 }

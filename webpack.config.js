@@ -4,9 +4,9 @@ const { readdirSync, existsSync } = require('fs');
 const entries = {};
 
 readdirSync('./modules').forEach((name) => {
-  const index = `./modules/${name}/index.js`;
-  if (existsSync(index) && name !== 'all') {
-    entries[`${name}/index`] = index;
+  const indexJS = `./modules/${name}/index.js`;
+  if (existsSync(indexJS) && name !== 'all') {
+    entries[name] = indexJS;
   }
 });
 
@@ -26,24 +26,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        test: /\.css/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            }
-          },
-          {
-            loader: 'postcss-loader'
-          }
-        ]
-      },
       {
         test: /\.js/,
         exclude: /node_modules/,

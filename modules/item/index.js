@@ -1,28 +1,32 @@
 import React from 'react';
+
 import { Tag } from './internal/tag';
 import { Price } from './internal/price';
 import { Image } from './internal/image';
 import { LastPrice } from './internal/last-price';
 import { Button } from './internal/button';
 import { Name } from './internal/name';
-import  './styles.css';
+import { Sub } from './internal/sub';
+import { Container, ContainerInfo, ContainerPrice } from './styles';
 
-const CLASS_ID = 'item';
-
-export const Item = ({ tag, price, button, name, image }) => {
+export const Item = ({ tag, price, button, name, image, sub }) => {
   return (
-    <div className={`${CLASS_ID}__container rounded overflow-hidden shadow-lg`}>
+    <Container>
       <Image {...image}>
-        {tag && <Tag {...tag}/>}
+        {tag && <Tag {...tag} />}
       </Image>
 
-      <div className={`${CLASS_ID}__info-line`}>
+      <ContainerInfo>
+        <Sub {...sub} />
         <Name {...name} />
-        <Price {...price}/>
-        {price.lastAmount && <LastPrice {...price} />}
+
+        <ContainerPrice>
+          <Price {...price}/>
+          {price.lastAmount && <LastPrice {...price} />}
+        </ContainerPrice>
 
         <Button {...button} />
-      </div>
-    </div>
+      </ContainerInfo>
+    </Container>
   );
 };
