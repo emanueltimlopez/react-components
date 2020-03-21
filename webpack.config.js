@@ -11,19 +11,18 @@ readdirSync('./modules').forEach((name) => {
 });
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: entries,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    libraryTarget: 'commonjs2'
   },
   optimization: {
-    runtimeChunk: true,
     usedExports: true
   },
-  externals: {
-    'react': 'commonjs react' 
-  },
+  externals: [
+    'react',
+    'styled-components'
+  ],
   module: {
     rules: [
       {
@@ -34,5 +33,5 @@ module.exports = {
         }
       },
     ]
-  }
+  },
 };
