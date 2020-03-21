@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
@@ -6,7 +6,8 @@ const GlobalStyles = createGlobalStyle`
 `
 
 export const Base = ({ children }) => (
-  <>
+  <Fragment>
     <GlobalStyles />
-  </>
+    { children }
+  </Fragment>
 );
