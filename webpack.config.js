@@ -15,14 +15,15 @@ module.exports = {
   entry: entries,
   output: {
     path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'commonjs2'
   },
   optimization: {
     runtimeChunk: true,
     usedExports: true
   },
-  externals: [
-    'react',
-  ],
+  externals: {
+    'react': 'commonjs react' 
+  },
   module: {
     rules: [
       {
