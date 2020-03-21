@@ -15,10 +15,9 @@ module.exports = {
   entry: entries,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    library: 'components',
   },
   optimization: {
-    runtimeChunk: false,
+    runtimeChunk: true,
     usedExports: true
   },
   externals: [
