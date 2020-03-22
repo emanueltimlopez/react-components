@@ -19,10 +19,10 @@ module.exports = {
   optimization: {
     usedExports: true
   },
-  externals: [
-    'react',
-    'styled-components'
-  ],
+  externals: {
+    'react': 'React',
+    'styled-components': 'styled-components'
+  },
   module: {
     rules: [
       {
