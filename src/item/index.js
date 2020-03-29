@@ -9,7 +9,7 @@ import { Name } from './internal/name';
 import { Sub } from './internal/sub';
 import { Container, ContainerInfo, ContainerPrice } from './styles';
 
-export const Item = ({ tag, price, button, name, image, sub }) => {
+const Item = ({ tag, price, button, name, image, sub }) => {
   return (
     <Container>
       <Image {...image}>
@@ -30,3 +30,5 @@ export const Item = ({ tag, price, button, name, image, sub }) => {
     </Container>
   );
 };
+
+export default Item;
