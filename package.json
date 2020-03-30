@@ -7,8 +7,7 @@
   "scripts": {
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build": "rollup -c",
-    "build:w": "webpack",
+    "build": "webpack",
     "deploy-storybook": "storybook-to-ghpages",
     "pub": "npm publish --access public"
   },

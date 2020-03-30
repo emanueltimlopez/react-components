@@ -4,20 +4,16 @@ const externalReact = require('webpack-external-react');
 module.exports = {
   mode: 'development',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.wp.umd.js',
+    path: path.resolve(__dirname, './'),
+    filename: 'index.js',
     libraryTarget: 'umd',
     library: 'react-components',
     umdNamedDefine: true,
-    globalObject: `(typeof self !== 'undefined' ? self : this)`
+    globalObject: 'this'
   },
   externals: {
     ...externalReact.externals,
-    'styled-components': {
-      'commonjs' : 'styled-components',
-      'commonjs2' : 'styled-components',
-      'amd' : 'styled-components'
-    }
+    'styled-components': 'styled-components'
   },
   module: {
     noParse: externalReact.noParse,
