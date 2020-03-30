@@ -4,7 +4,7 @@ import Logo from './internal/logo'
 import Menu from './internal/menu';
 import { Container } from './styles'
 
-const Header = ({ menu }) => {
+const Header = ({ menu, image }) => {
   const [mini, setMini] = useState(false)
   useScrollPosition(({ prevPos, currPos }) => {
     const isShow = !(currPos.y > 1)
@@ -13,7 +13,7 @@ const Header = ({ menu }) => {
 
   return (
     <Container mini={mini}>
-      <Logo mini={mini}/>
+      <Logo mini={mini} image={image}/>
       <Menu data={menu} mini={mini}/>
     </Container>
   )

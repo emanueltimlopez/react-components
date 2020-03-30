@@ -1,9 +1,9 @@
 import React, {Fragment} from 'react';
 import { Container } from './styles';
 
-const logo = ({ mini = false }) => (
+const logo = ({ mini = false, image }) => (
   <Container>
-    Logo
+    <img src={image}/>
   </Container>
 )
 

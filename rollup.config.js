@@ -18,6 +18,11 @@ export default {
       sourcemap: true,
       name: 'react-components'
     },
+    {
+      file: 'dist/index.es.js',
+      format: 'es',
+      sourcemap: true,
+    },
   ],
   external: [
     {'react': 'React'},
