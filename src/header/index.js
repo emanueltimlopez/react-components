@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position'
+import * as USP from '@n8tb1t/use-scroll-position'
 import Logo from './internal/logo'
 import Menu from './internal/menu';
 import { Container } from './styles'
 
 const Header = ({ menu, image }) => {
   const [mini, setMini] = useState(false)
-  useScrollPosition(({ prevPos, currPos }) => {
+  USP.useScrollPosition(({ prevPos, currPos }) => {
     const isShow = !(currPos.y > 1)
     if (isShow !== mini) setMini(isShow)
   }, [mini])

@@ -35,14 +35,6 @@ export default {
     babel({
       exclude: '**/node_modules/**'
     }),
-    resolve(),
-    commonjs({
-      namedExports: {
-        react: Object.keys(react),
-        'react-dom': Object.keys(reactDom),
-        'react-is': Object.keys(reactIs),
-        'prop-types': Object.keys(propTypes)
-      }
-    })
+    resolve()
   ]
 }
