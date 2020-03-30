@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as USP from '@n8tb1t/use-scroll-position'
+import * as USP from '@n8tb1t/use-scroll-position/lib/index';
 import Logo from './internal/logo'
 import Menu from './internal/menu';
 import { Container } from './styles'

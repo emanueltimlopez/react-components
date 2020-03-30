@@ -3,7 +3,6 @@ import external from 'rollup-plugin-peer-deps-external'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-import commonjs from '@rollup/plugin-commonjs';
 import * as react from 'react';
 import * as reactDom from 'react-dom';
 import * as reactIs from 'react-is';
@@ -35,6 +34,6 @@ export default {
     babel({
       exclude: '**/node_modules/**'
     }),
-    resolve()
+    resolve(),
   ]
 }
