@@ -10,7 +10,7 @@
     "build": "rollup -c",
     "build:w": "webpack",
     "deploy-storybook": "storybook-to-ghpages",
-    "publish": "npm publish --access public"
+    "pub": "npm publish --access public"
   },
   "author": "",
   "license": "ISC",
